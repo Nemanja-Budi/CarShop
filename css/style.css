@@ -125,7 +125,6 @@ footer {
 footer .footerContainer {
   width: 70%;
   margin: 0 auto;
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -203,14 +202,17 @@ footer .footerContainer article p {
   }
 }
 @media only screen and (max-width: 1200px) {
-  article {
+  footer {
+    text-align: center;
+  }
+  footer article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
   }
-  article p {
+  footer article p {
     font-style: italic;
     color: #fff;
   }

@@ -108,7 +108,7 @@ footer {
     .footerContainer {
         width: 70%;
         margin: 0 auto;
-        text-align: center;
+        
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -165,7 +165,11 @@ footer {
 }
 
 @include tablet {
-    @include footerArticle;
+    footer {
+        @include footerArticle;
+        text-align: center;
+    }
+    
     nav {
         @include navMixin;
         width: 100%!important;
