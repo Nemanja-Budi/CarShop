@@ -18,3 +18,65 @@
 	}
 }
 
+@mixin tablet {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+    
+}
+
+@mixin mobilni {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+    
+}
+
+@mixin footerArticle {
+	article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        p {
+            font-style: italic;
+            color: #fff;
+        }
+    }
+}
+
+@mixin navMixin() {
+	background-color: #fff;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+	@content;
+}
+
+@mixin ulMixin ($displej) {
+	display: $displej;
+	gap: 1.5rem;
+	text-align: center;
+	li {
+		list-style-type: none;
+		a {
+			text-decoration: none;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@mixin carSection($carDisplej,$carGap) {
+	display: $carDisplej;
+	width: 70%;
+	margin: 0 auto;
+	gap: $carGap;
+	@content;
+}
+
+@mixin linija($sirinaLinije) {
+	border: 1px solid red;
+	width: $sirinaLinije;
+	margin: 0 auto;
+}

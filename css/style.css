@@ -12,15 +12,20 @@ body {
 }
 
 header {
-  background-color: #000000;
+  background-image: url(../slike/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70dvh;
   padding: 1rem;
 }
 header nav {
   background-color: #fff;
   display: flex;
-  flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 header nav p {
   font-weight: bold;
@@ -29,7 +34,7 @@ header nav p span {
   color: #ff3720;
 }
 header nav ul {
-  display: grid;
+  display: flex;
   gap: 1.5rem;
   text-align: center;
 }
@@ -41,7 +46,12 @@ header nav ul li a {
   font-size: 0.8rem;
 }
 header article {
-  padding: 3rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  gap: 0rem;
 }
 header article h1 {
   font-size: 2.75rem;
@@ -52,12 +62,15 @@ header article h1, header article h2 {
 }
 header article .line {
   border: 1px solid red;
+  width: 40%;
+  margin: 0 auto;
 }
 
 main {
   display: grid;
   grid-template-rows: auto 1fr;
   padding-top: 4rem;
+  gap: 2rem;
   background-color: #f0f0f0;
 }
 main h2 {
@@ -76,11 +89,11 @@ main .container button {
   background-color: #ff3720;
 }
 main .container .carSection {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 70%;
   margin: 0 auto;
-  gap: 8rem;
+  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 main .container .carSection figure {
   display: flex;
@@ -101,6 +114,9 @@ main .container .tableSection {
 main .container .tableSection h2 {
   text-align: center;
 }
+main .container .tableSection button {
+  display: none;
+}
 
 footer {
   background-color: #000000;
@@ -113,8 +129,6 @@ footer .footerContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
 }
 footer .footerContainer .borderP {
   border-bottom: 1px solid #ff3720;
@@ -126,12 +140,95 @@ footer .footerContainer .borderP span {
 }
 footer .footerContainer article {
   display: flex;
-  flex-direction: column;
+  padding: 0rem 1rem;
+  justify-content: space-between;
   gap: 1rem;
 }
 footer .footerContainer article p {
   font-style: italic;
   color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  article p {
+    font-style: italic;
+    color: #fff;
+  }
+  header {
+    background: #000;
+    height: auto;
+  }
+  header nav {
+    background-color: #fff;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  header nav ul {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  header nav ul li {
+    list-style-type: none;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  header article {
+    justify-content: flex-start;
+    height: auto;
+    padding: 4rem 0.5rem 1rem 0.5rem;
+  }
+  .tableSection button {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .carSection {
+    display: flex !important;
+    width: 70%;
+    margin: 0 auto;
+    gap: 8rem !important;
+    flex-direction: column !important;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  article p {
+    font-style: italic;
+    color: #fff;
+  }
+  nav {
+    background-color: #fff;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100% !important;
+  }
+  .carSection {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .line {
+    border: 1px solid red;
+    width: 100% !important;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
